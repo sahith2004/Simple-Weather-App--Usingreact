@@ -43,6 +43,9 @@ const Weather = () => {
            
       }).catch(function (error) {
           console.error(error);
+          if(error){
+            alert("Location not available");
+          }
           setError(()=>{
             return error;
           })
